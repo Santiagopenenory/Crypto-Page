@@ -14,13 +14,11 @@
 		let response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false');
 		coins =  await response.json();
 		filteredCoins = coins;
-		console.log(coins)
 	}
 	loadCoins()
 	let searchCoin = (value)=>{
 		filteredCoins = coins.filter(coin => coin.name.toLowerCase().includes(value.toLowerCase()) ||
 		coin.symbol.toLowerCase().includes(value.toLowerCase()))
-		console.log(coins)
 	}
 
 	onMount(()=>{
