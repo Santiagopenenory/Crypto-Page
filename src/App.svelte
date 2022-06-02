@@ -38,8 +38,8 @@
 	</div>
 		<div class="container">
 			{#each filteredCoins as coin, i}	  
-				<Card style="width: 300px;" class="mb-3 bg-dark" >
-					<div class="row g-0 text-center">
+				<Card style="width: 300px;" class="mb-3 bg-dark col" >
+					<div class="g-0 text-center row">
 						<div class="col-md-4"><br>
 							<img src= {coin.image} alt={coin.name} style="padding-left:20px;" class="img-fluid rounded-start">
 						</div>

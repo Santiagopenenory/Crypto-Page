@@ -7950,8 +7950,8 @@ var app = (function () {
     			br1 = element("br");
     			t1 = space();
     			create_component(cardsubtitle1.$$.fragment);
-    			add_location(br0, file, 47, 60, 1500);
-    			add_location(br1, file, 48, 75, 1580);
+    			add_location(br0, file, 47, 60, 1504);
+    			add_location(br1, file, 48, 75, 1584);
     		},
     		m: function mount(target, anchor) {
     			mount_component(cardtitle, target, anchor);
@@ -8025,7 +8025,7 @@ var app = (function () {
     	return block;
     }
 
-    // (41:4) <Card style="width: 300px;" class="mb-3 bg-dark" >
+    // (41:4) <Card style="width: 300px;" class="mb-3 bg-dark col" >
     function create_default_slot(ctx) {
     	let div2;
     	let div0;
@@ -8059,18 +8059,18 @@ var app = (function () {
     			div1 = element("div");
     			create_component(cardbody.$$.fragment);
     			t2 = space();
-    			add_location(br, file, 42, 28, 1269);
+    			add_location(br, file, 42, 28, 1273);
     			if (!src_url_equal(img.src, img_src_value = /*coin*/ ctx[5].image)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", img_alt_value = /*coin*/ ctx[5].name);
     			set_style(img, "padding-left", "20px");
     			attr_dev(img, "class", "img-fluid rounded-start");
-    			add_location(img, file, 43, 7, 1281);
+    			add_location(img, file, 43, 7, 1285);
     			attr_dev(div0, "class", "col-md-4");
-    			add_location(div0, file, 42, 6, 1247);
+    			add_location(div0, file, 42, 6, 1251);
     			attr_dev(div1, "class", "col-md-8");
-    			add_location(div1, file, 45, 6, 1399);
-    			attr_dev(div2, "class", "row g-0 text-center");
-    			add_location(div2, file, 41, 5, 1207);
+    			add_location(div1, file, 45, 6, 1403);
+    			attr_dev(div2, "class", "g-0 text-center row");
+    			add_location(div2, file, 41, 5, 1211);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -8121,7 +8121,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(41:4) <Card style=\\\"width: 300px;\\\" class=\\\"mb-3 bg-dark\\\" >",
+    		source: "(41:4) <Card style=\\\"width: 300px;\\\" class=\\\"mb-3 bg-dark col\\\" >",
     		ctx
     	});
 
@@ -8136,7 +8136,7 @@ var app = (function () {
     	card = new Card({
     			props: {
     				style: "width: 300px;",
-    				class: "mb-3 bg-dark",
+    				class: "mb-3 bg-dark col",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
