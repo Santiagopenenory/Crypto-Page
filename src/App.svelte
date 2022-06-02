@@ -1,4 +1,6 @@
 <script>
+	import {Table} from 'sveltestrap'
+	import { Styles } from 'sveltestrap';
 	import {onMount} from "svelte";
 	let coins = [];
 	let filteredCoins = [];
@@ -26,6 +28,10 @@
 	})
 </script>
 
+<svelte:head>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+</svelte:head>
+
 <main>
 	<div class="container">
 		<div class="row">
@@ -34,16 +40,16 @@
 			placeholder="Search your coin" 
 			on:keyup={({target: {value}}) => searchCoin(value)}
 			bind:this={ref}>
-			<table class="table table-dark table-striped">
+			<Table bordered dark striped responsive>
 				<thead>
 					<tr>
 						{#each titles as title }
 							<th>{title}</th>
 						{/each}
 					</tr>
-				  </thead>
-				  <tbody>
-					  {#each filteredCoins as coin, i}	  
+				</thead>
+				<tbody>
+					{#each filteredCoins as coin, i}	  
 						<tr>
 							<td style="color:darkgray;">{i+1}</td>
 							<td>
@@ -65,10 +71,10 @@
 								$ {coin.total_volume.toLocaleString()}
 							</td>
 						</tr>
-					  {/each}
+					{/each}
 					
-				  </tbody>
-			</table> 
+				</tbody>
+			</Table>
 		</div>
 	</div>
 
